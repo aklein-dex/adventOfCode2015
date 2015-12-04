@@ -6,10 +6,10 @@ map = ">^^v^<>v<<<v<v^>>v^^^<v<>^^><^<<^vv>>>^<<^>><vv<<v^<^^><>>><>v<><>^^<^^^<
 
 if ARGV[0] == "2"
     puts "--- Part Two ---"
-    traveler = [ [0,0], [0,0] ]
+    travelers = [ [0,0], [0,0] ]
 else
     puts "--- Part One ---"
-    traveler = [ [0,0] ]
+    travelers = [ [0,0] ]
 end
 
 current_traveler = 0
@@ -24,17 +24,17 @@ houses[0][0] = 1
 map.each_char do |move|
 
     if move == '>'
-        traveler[current_traveler][0]+=1
+        travelers[current_traveler][0]+=1
     elsif move == '<'
-        traveler[current_traveler][0]-=1
+        travelers[current_traveler][0]-=1
     elsif move == '^'
-        traveler[current_traveler][1]+=1
+        travelers[current_traveler][1]+=1
     else #v
-        traveler[current_traveler][1]-=1
+        travelers[current_traveler][1]-=1
     end
     
-    x = traveler[current_traveler][0]
-    y = traveler[current_traveler][1]
+    x = travelers[current_traveler][0]
+    y = travelers[current_traveler][1]
     
     if !houses.has_key?(x)
         houses[x] = Hash.new(0)
@@ -46,7 +46,7 @@ map.each_char do |move|
     end
     
     # next traveler
-    current_traveler = (current_traveler + 1) % traveler.length
+    current_traveler = (current_traveler + 1) % travelers.length
 end
     
 
