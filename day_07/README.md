@@ -8,14 +8,15 @@ The included instructions booklet describes how to connect the parts together: x
 
 For example:
 
-123 -> x means that the signal 123 is provided to wire x.
-x AND y -> z means that the bitwise AND of wire x and wire y is provided to wire z.
-p LSHIFT 2 -> q means that the value from wire p is left-shifted by 2 and then provided to wire q.
-NOT e -> f means that the bitwise complement of the value from wire e is provided to wire f.
-Other possible gates include OR (bitwise OR) and RSHIFT (right-shift). If, for some reason, you'd like to emulate the circuit instead, almost all programming languages (for example, C, JavaScript, or Python) provide operators for these gates.
+ * 123 -> x means that the signal 123 is provided to wire x.
+ * x AND y -> z means that the bitwise AND of wire x and wire y is provided to wire z.
+ * p LSHIFT 2 -> q means that the value from wire p is left-shifted by 2 and then provided to wire q.
+ * NOT e -> f means that the bitwise complement of the value from wire e is provided to wire f.
+ * Other possible gates include OR (bitwise OR) and RSHIFT (right-shift). If, for some reason, you'd like to emulate the circuit instead, almost all programming languages (for example, C, JavaScript, or Python) provide operators for these gates.
 
 For example, here is a simple circuit:
 
+```javascript
 123 -> x
 456 -> y
 x AND y -> d
@@ -24,8 +25,10 @@ x LSHIFT 2 -> f
 y RSHIFT 2 -> g
 NOT x -> h
 NOT y -> i
-After it is run, these are the signals on the wires:
+```
 
+After it is run, these are the signals on the wires:
+```javascript
 d: 72
 e: 507
 f: 492
@@ -34,6 +37,8 @@ h: 65412
 i: 65079
 x: 123
 y: 456
+```
+
 In little Bobby's kit's instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?
 
 Your puzzle answer was 956.
