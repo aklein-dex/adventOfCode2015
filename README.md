@@ -15,6 +15,11 @@ For some puzzles, you can pass parameter "2" to run the second part of the puzzl
     $ ruby xxxx.rb 2
 ```
 
-I was always wondering: should I write a minimum line of codes (at a cost to lose readability)? Should I trust the input? For example, will the input file contains only "<>^v"?
+I was always wondering: 
+
+ * Should I write a minimum line of codes (at a cost to lose readability)? 
+ * Should I trust the input? For example, will the input file contains only "<>^v"?
+ * Should I create functions or objects? Will the code be used another time?
+
 
 
