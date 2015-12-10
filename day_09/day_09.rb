@@ -64,6 +64,8 @@ $max_city = $cities.keys.length
 visited = Array.new
 
 # Note: I should have use $cities.keys.permutation
+# Note 2: but before using ".permutation", you have to be sure
+#         that all the cities are connected to each other!
 $cities.each do |city, links|
     travel(city, visited, 0)
 end
